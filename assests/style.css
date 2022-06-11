@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background:linear-gradient(to bottom, #1d4350, #a43931);
+    background-attachment: fixed;
+    color: white;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    padding:20px;
+    font-size: 20px;
+    width: 100%;
+}
+
