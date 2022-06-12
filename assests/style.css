@@ -15,7 +15,7 @@ body{
 h1{
     text-align: center;
      padding:20px;
-    font-size: 20px;
+    font-size: 40px;
     width: 100%;
 }
 
@@ -36,8 +36,35 @@ p{
     text-align: center;
 }
 
-.button{
-    margin: 20px;
-    padding: 10px;
-    border: 10px;
+.container{
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.container button{
+    margin: 10px;
+    padding: 20px;
+    width: 80%;
+    font-size: 20px;
+
+}
+   
+.box{
+    text-align: center;
+    justify-content: center;
+    display: block;
+}
+
+#beginButton{
+    padding: 8px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#myTimer{
+    margin: 10px;
+    padding:10px;
+    text-align: left;
+
 }
