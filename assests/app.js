@@ -1,13 +1,6 @@
-// var allQuestions = [ 
-//     'What is a String?', 
-//     'What is the definition of a Number?',
-//     'What is a Boolean?',
-//     'What does Null define?',
-//     'What is an Array?',
-//     'What is the purpose of a function?',
-// ]
-
 var startBtn = document.getElementById('beginButton');
+
+var questH2 = document.getElementById("question");
 
 var thePlayEl = document.querySelector('.container');
 
@@ -18,13 +11,21 @@ function startGame() {
     thePlayEl.style.display = 'block';
     startBtn.style.display = 'none';
     setTime()
-    nextQuestion()
+    var reqNextQues = nextQuestion()
+    let question = reqNextQues[0]
+    let answer = reqNextQues[1]
+    let solution = reqNextQues[2]
+
+    questH2.textContent = question
 }
 
 function nextQuestion() {
     var random = Math.floor(Math.random() * ansQuest.length);
-    let question = ansQuest
-    console.log(question);
+    let currentQuest = ansQuest[random]
+    let question = currentQuest.question;
+    let answer = currentQuest.answer;
+    let solution = currentQuest.correctAnswer;
+    return [question, answer, solution];
 }
 
 var ansQuest = [
@@ -45,8 +46,36 @@ var ansQuest = [
             c: "The number data type is used to represent positive or negative number with or without decimal place.",
         },
         correctAnswer: 'c',
+    },
+    {
+        question: "What is a Boolean?",
+        answer: {
+            a: "It's when my friend bo-leans to the side.",
+            b: "A binary variable, having two possible values called “true” and “false.”.",
+            c: "It a different way to spell bowling.",
+        },
+        correctAnswer: 'b',
+    },
+    {
+        question: "What does Null define?",
+        answer: {
+            a: "Boring; dull. Dude, this party is completely null.",
+            b: "Meaning no. Ex, Aye Nate can I borrow your car to go the store, NULL!",
+            c: "Simply nothing, Null means there is no value.",
+        },
+        correctAnswer: 'c',
+    },
+    {
+        question: "What is an Array?",
+        answer: {
+            a: "Its when nyou wake up in the morning and see a ray of sunshine.",
+            b: "Is an ordered list of values.",
+            c: "A loud call when you see your friend, Aye Ray!",
+        },
     }
 ]
+
+
 
 // var inputWrong = document.getElementById('mybutton');
 // inputWrong.addEventListener('click', wrongAnswer); 
