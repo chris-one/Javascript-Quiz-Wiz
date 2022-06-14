@@ -1,12 +1,16 @@
+    //  the var for my start button
 var startBtn = document.getElementById('beginButton');
 
+    // the var for the questions
 var questH2 = document.getElementById("question");
 
+    // the var were the questions get pulled
 var thePlayEl = document.querySelector('.container');
 
-
+    // the var for the timer linked to my document
 var timerEl = document.getElementById('myTimer');
 
+    //  the function to start the game
 function startGame() {
     thePlayEl.style.display = 'block';
     startBtn.style.display = 'none';
@@ -19,6 +23,7 @@ function startGame() {
     questH2.textContent = question
 }
 
+    // the function to start rotating randomly the questions
 function nextQuestion() {
     var random = Math.floor(Math.random() * ansQuest.length);
     let currentQuest = ansQuest[random]
@@ -28,6 +33,7 @@ function nextQuestion() {
     return [question, answer, solution];
 }
 
+    //  the var for the questions and answers
 var ansQuest = [
     {
         question: "What is a String?",
@@ -75,6 +81,82 @@ var ansQuest = [
     }
 ]
 
+function reqNextQues (questH2, nextQuestion){
+	// we'll need a place to store the output and the answer choices
+	var output = [];
+	var answers;
+
+	// for each question...
+	for(var i=0; i<reqNextQues.length; i++){
+		
+		// first reset the list of answers
+		answers = [];
+
+		// for each available answer to this question...
+		for(letter in questions[i].answers){
+
+			// ...add an html radio button
+			answers.push(
+				'<label>'
+					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+					+ letter + ': '
+					+ questions[i].answers[letter]
+				+ '</label>'
+			);
+		}
+
+		// add this question and its answers to the output
+		// output.push(
+			// '<div class="question">' + questions[i].question + '</div>'
+			// + '<div class="answers">' + answers.join('') + '</div>'
+		// );
+	}
+
+	// finally combine our output list into one string of html and put it on the page
+	questH2.innerHTML = output.join('');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // var inputWrong = document.getElementById('mybutton');
@@ -85,10 +167,12 @@ var ansQuest = [
     // setTime()
 // }
 
-// timer
+
+
+//  the timer
 function setTime() {
     //counts down from 00 seconds
-    var timeLeft = 10;
+    var timeLeft = 20;
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
@@ -111,4 +195,5 @@ function setTime() {
     }, 1000);
   }
 
+//   the listener for the click to start the game
   startBtn.addEventListener('click', startGame);

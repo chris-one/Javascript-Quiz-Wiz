@@ -1,3 +1,4 @@
+    /* the css for the whole page */
 * {
     margin: 0;
     padding:0;
@@ -5,6 +6,7 @@
     scroll-behavior: smooth;
 }
 
+    /* color and padding for the body */
 body{
     background:linear-gradient(to bottom, #1d4350, #a43931);
     background-attachment: fixed;
@@ -13,6 +15,7 @@ body{
     padding: 20px;
 }
 
+    /* font size and color for the game name */
 h1{
     text-align: center;
      padding:20px;
@@ -20,6 +23,7 @@ h1{
     width: 100%;
 }
 
+    /* my css for the questions */
 h2{
     text-align: 20px;
     padding:20px;
@@ -29,7 +33,9 @@ h2{
 
 }
 
-p{
+    the p was gonna be for the questions, but didnt end up using them
+
+* p{
     text-align: 20px;
     padding: 20px;
     width: 100%;
@@ -37,6 +43,7 @@ p{
     text-align: center;
 }
 
+    /* my css for the conatiner, align, color, and size */
 .container{
     text-align: center;
     justify-content: center;
@@ -45,6 +52,7 @@ p{
     border-radius: 30px;
 }
 
+    /* my css for the qeustion option buttons */
 .container button{
     margin: 10px;
     padding: 20px;
@@ -53,12 +61,14 @@ p{
     cursor: pointer;
 }
    
+    /* my css to center my questions */
 .box{
     text-align: center;
     justify-content: center;
     display: block;
 }
 
+    /* my css for the begin button, align it to the center of the page */
 #beginButton{
     padding: 8px;
     margin: 10px;
@@ -68,6 +78,7 @@ p{
     /* display: block;  */
 }
 
+    /* timer css so it can be placed where the start button is as soon as the game begins */
 #myTimer{
     margin: 10px;
     padding:10px;
