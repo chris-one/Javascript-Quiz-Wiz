@@ -33,9 +33,8 @@ h2{
 
 }
 
-    the p was gonna be for the questions, but didnt end up using them
-
-* p{
+    /* the p was gonna be for the questions, but didnt end up using it but used it align my page */
+p{
     text-align: 20px;
     padding: 20px;
     width: 100%;

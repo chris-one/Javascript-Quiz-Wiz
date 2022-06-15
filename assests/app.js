@@ -135,40 +135,6 @@ function reqNextQues (questH2, nextQuestion){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var inputWrong = document.getElementById('mybutton');
-// inputWrong.addEventListener('click', wrongAnswer); 
-
-// function wrongAnswer() {
-    // document.getElementById('mybutton').textContent = 'Try again'
-    // setTime()
-// }
-
-
-
 //  the timer
 function setTime() {
     //counts down from 00 seconds
